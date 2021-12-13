@@ -1,6 +1,5 @@
 
 //    DataConversion(){};           //constructor
-#include "DataConversion.h"
 
 float DataConversion::hexToFloat(uint16_t h2, uint16_t h1)
 { // 2 * 16bit to float
