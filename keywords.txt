@@ -1,0 +1,10 @@
+#######################################
+# Data types (KEYWORD1)
+#######################################
+DataConversion	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+hexToFloat	KEYWORD2
+floatToHex	KEYWORD2
