@@ -1,0 +1,19 @@
+{
+    "name": "DataConversion",
+    "keywords": "DataConversion, IEEE754-Standard-conversion, FloatToHex, HexToFloat",
+    "description": "Library for Data Conversion of Hex to Float and float to Hex as IEEE754 Standards for Arduino.",
+    "authors": [
+        {
+            "name": "Sheharyar SM Adil",
+            "email": "sheharyarsmadil@gmail.com",
+            "maintainer": true
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/SheharyarSMAdil/DataConversionArduino"
+    },
+    "version": "0.0.1",
+    "frameworks": "arduino",
+    "platforms": "*"
+}
