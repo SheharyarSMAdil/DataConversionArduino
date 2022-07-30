@@ -7,4 +7,5 @@ DataConversion	KEYWORD1
 # Methods and Functions (KEYWORD2)
 #######################################
 hexToFloat	KEYWORD2
+hexToDouble	KEYWORD2
 floatToHex	KEYWORD2
