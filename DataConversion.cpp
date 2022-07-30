@@ -17,7 +17,7 @@ float DataConversion::hexToFloat(uint16_t h2, uint16_t h1)
 }
 
 double DataConversion::hexToDouble(uint16_t h4, uint16_t h3,uint16_t h2, uint16_t h1)
-{ // 2 * 16bit to float
+{ // 4 * 16bit to double
      uint8_t plow = h4 & 0xff;
     uint8_t phigh = (h4 >> 8);
     uint8_t qlow = h3 & 0xff;
@@ -52,4 +52,12 @@ void DataConversion::floatToHex(uint16_t &R1, uint16_t &R2, float value)
     TData.TestData_Float = value;
     R1 = TData.TestArray[1] << 8 | TData.TestArray[0] & 0xff;
     R2 = TData.TestArray[3] << 8 | TData.TestArray[2] & 0xff;
+}
+void DataConversion::doubleToHex(uint16_t &R1, uint16_t &R2,uint16_t &R3, uint16_t &R4, double value)
+{ //  float to 2 * 16bit
+    TData.TestData_Double = value;
+    R1 = TData.TestArray[1] << 8 | TData.TestArray[0] & 0xff;
+    R2 = TData.TestArray[3] << 8 | TData.TestArray[2] & 0xff;
+    R3 = TData.TestArray[5] << 8 | TData.TestArray[4] & 0xff;
+    R4 = TData.TestArray[7] << 8 | TData.TestArray[6] & 0xff;
 }
