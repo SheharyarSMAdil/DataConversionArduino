@@ -8,6 +8,7 @@ class DataConversion
 private:
     union
     {
+    	double TestData_Double;
         float TestData_Float;
         unsigned char TestArray[4];
     } TData;
