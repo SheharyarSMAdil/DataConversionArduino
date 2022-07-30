@@ -47,11 +47,22 @@ float DataConversion::hexToFloat(byte h2, byte l2, byte h1, byte l1)
     return TData.TestData_Float;
 }
 
-float DataConversion::hexToInt( byte h1, byte l1)
-{ // 4 * 8bit to float
-    TData.TestArray[1] = h1;
-    TData.TestArray[0] = l1;
-    return TData.TestData_Int;
+uint32_t DataConversion::hexToInt( uint16_t h2, uint16_t h1)
+{ // 2 * 16bit to uint32_t
+
+	  uint8_t xlow = h2 & 0xff;
+	  uint8_t xhigh = (h2 >> 8);
+	  uint8_t ylow = h1 & 0xff;
+	  uint8_t yhigh = (h1 >> 8);
+	
+	  //  long val = 0;
+	  uint32_t val = 0;
+	  val += xhigh << 24;
+	  val += xlow << 16;
+	  val += yhigh << 8;
+	  val += ylow;
+	
+	  return val;
 }
 
 void DataConversion::floatToHex(uint16_t &R1, uint16_t &R2, float value)
@@ -68,3 +79,4 @@ void DataConversion::doubleToHex(uint16_t &R1, uint16_t &R2,uint16_t &R3, uint16
     R3 = TData.TestArray[5] << 8 | TData.TestArray[4] & 0xff;
     R4 = TData.TestArray[7] << 8 | TData.TestArray[6] & 0xff;
 }
+

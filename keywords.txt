@@ -9,3 +9,5 @@ DataConversion	KEYWORD1
 hexToFloat	KEYWORD2
 hexToDouble	KEYWORD2
 floatToHex	KEYWORD2
+hexToInt	KEYWORD2
+doubleToHex	KEYWORD2
