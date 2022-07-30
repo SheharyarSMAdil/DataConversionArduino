@@ -47,6 +47,13 @@ float DataConversion::hexToFloat(byte h2, byte l2, byte h1, byte l1)
     return TData.TestData_Float;
 }
 
+float DataConversion::hexToInt( byte h1, byte l1)
+{ // 4 * 8bit to float
+    TData.TestArray[1] = h1;
+    TData.TestArray[0] = l1;
+    return TData.TestData_Int;
+}
+
 void DataConversion::floatToHex(uint16_t &R1, uint16_t &R2, float value)
 { //  float to 2 * 16bit
     TData.TestData_Float = value;

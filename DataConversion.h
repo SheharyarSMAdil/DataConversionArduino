@@ -10,6 +10,7 @@ private:
     {
     	double TestData_Double;
         float TestData_Float;
+        int TestData_Int;
         unsigned char TestArray[4];
     } TData;
 
